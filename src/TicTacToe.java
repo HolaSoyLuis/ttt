@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class TicTacToe{
-    private player firstPlayer;
+    private Player firstPlayer;
     private Player secondPlayer;
     private Board board;
     private Turn turn;
@@ -10,8 +10,6 @@ public class TicTacToe{
         firstPlayer = new Player();
         secondPlayer = new Player();
     }
-
-
 
     public void run(){
         System.out.println("Welcome =D (main menu)");
@@ -28,5 +26,6 @@ public class TicTacToe{
     public void showInfo(){
         System.out.println("Match information");
         board.getWinner();
+    }
 
 }

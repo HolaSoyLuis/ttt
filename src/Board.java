@@ -49,29 +49,29 @@ public class Board{
         return false;
     }
     
-    public horizontalWin(Piece piece){
+    public boolean horizontalWin(Piece piece){
         for(int i = 0; i < BOARD_SIZE; i++){
             int count = 0;
             for(int j = 0; j < BOARD_SIZE; j++){
                 if(pieces[i][j] == piece)
                     count++;
             }
+            if(count == BOARD_SIZE) return true;
         }
-        if(count == BOARD_SIZE) return true;
-        else return false;
+        return false;
     }
     
 
-    public horizontalWin(Piece piece){
+    public boolean verticalWin(Piece piece){
         for(int i = 0; i < BOARD_SIZE; i++){
             int count = 0;
             for(int j = 0; j < BOARD_SIZE; j++){
                 if(pieces[j][i] == piece)
                     count++;
             }
+            if(count == BOARD_SIZE) return true;
         }
-        if(count == BOARD_SIZE) return true;
-        else return false;
+        return false;
     }
 
     public boolean diagonalWin(Piece piece){
