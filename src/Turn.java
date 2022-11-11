@@ -29,7 +29,7 @@ public class Turn{
             int y = Input.scan.nextInt();
             Coordinate coord = new Coordinate(x, y);
             if(board.isMovementAvailable(coord)){
-                board.putPiece(coord, Player.getPiece());
+                board.putPiece(coord, player.getPiece());
                 isValid = true;
             }
             System.out.println("Invalid coordinate! try again");

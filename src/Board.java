@@ -29,7 +29,7 @@ public class Board{
                 if(pieces[i][j] == Piece.O) System.out.print(" | " + "O");
                 if(pieces[i][j] == Piece.EMPTY) System.out.print(" | " + " ");
             }
-            System.out.println();
+            System.out.println(" |");
         }
     }
 
@@ -113,13 +113,11 @@ public class Board{
     }
     */
 
-    public boolean putPiece(Coordinate coord, Piece piece){
+    public void putPiece(Coordinate coord, Piece piece){
         pieces[coord.getX()][coord.getY()] = piece;
         if(isWinner(piece)){
             winner = piece;
-            return true;
         }
-        return false;
     }
 
     public Piece getWinner(){

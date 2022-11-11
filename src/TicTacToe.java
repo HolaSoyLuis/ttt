@@ -11,16 +11,20 @@ public class TicTacToe{
         secondPlayer = new Player();
     }
 
-    public void run(){
+    public void init(){
         System.out.println("Welcome =D (main menu)");
         System.out.println("First player enter your name");
         String firstPlayerName = Input.scan.nextLine();
+        firstPlayer.setName(firstPlayerName);
         System.out.println("Second player enter your name");
         String secondPlayerName = Input.scan.nextLine();
+        secondPlayer.setName(secondPlayerName);
     }
 
     public void play(){
-        turn.execute();
+        init();
+        // turn.execute();
+        showInfo();
     }
 
     public void showInfo(){
